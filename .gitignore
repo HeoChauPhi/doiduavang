@@ -81,3 +81,6 @@ Thumbs.db
 # Don't ignore Slack icons #
 #################################
 !/web/slack-icons
+
+# Composer.lock
+composer.lock
