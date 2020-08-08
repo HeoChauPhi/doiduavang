@@ -1,8 +1,12 @@
 <nav aria-label="breadcrumb" class="breadcrumb-wrapper animation-element" data-animate="fadeIn">
   <ol class="breadcrumb">
     <li class="breadcrumb-item">
-      <a href="{{ site.url }}">{{ __('home', 'pdj_theme') }}</a>
+      <a href="{{ site.url }}">{{ __('home', 'custom_theme') }}</a>
     </li>
+
+    {% if fn('get_post_type') != 'page' %}
+    <li class="breadcrumb-item">{{ fn('get_post_type') }}</li>
+    {% endif %}
 
     <li class="breadcrumb-item active" aria-current="page">
       {% if tax_title %}

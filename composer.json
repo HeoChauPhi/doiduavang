@@ -58,7 +58,7 @@
     "roots/wp-password-bcrypt": "^1.0.0",
     "advanced-custom-fields-pro": "5.8.12",
     "timber/timber": "~1.16.0",
-    "wpackagist-plugin/contact-form-7": "5.2",
+    "wpackagist-plugin/contact-form-7": "5.2.1",
     "mdsimpson/contact-form-7-to-database-extension": "2.10.36",
     "wpackagist-plugin/tinymce-advanced": "5.4.0",
     "wpackagist-plugin/stage-file-proxy": "dev-trunk",
@@ -68,7 +68,8 @@
     "wpackagist-plugin/widget-css-classes": "1.5.4",
     "wpackagist-plugin/advanced-custom-fields-font-awesome": "3.1.1",
     "wpackagist-plugin/mailchimp-for-wp": "4.8",
-    "wpackagist-plugin/crelly-slider": "1.4.2"
+    "wpackagist-plugin/crelly-slider": "1.4.2",
+    "wpackagist-plugin/so-widgets-bundle": "1.17.4"
   },
   "config": {
     "vendor-dir": "vendor",

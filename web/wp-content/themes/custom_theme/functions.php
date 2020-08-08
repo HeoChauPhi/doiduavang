@@ -179,3 +179,26 @@ add_action('acf/init', function() {
   $google_api_key = $theme_options['ct_google_api_key'];
   acf_update_setting('google_api_key', $google_api_key);
 });
+
+// Change Post to New
+add_action( 'init', 'ct_change_post_object_to_new' );
+// Change dashboard Posts to News
+function ct_change_post_object_to_new() {
+  $get_post_type = get_post_type_object('post');
+  $labels = $get_post_type->labels;
+    $labels->name = __('News', 'custom_theme');
+    $labels->singular_name = __('News', 'custom_theme');
+    $labels->add_new = __('Add News', 'custom_theme');
+    $labels->add_new_item = __('Add News', 'custom_theme');
+    $labels->edit_item = __('Edit News', 'custom_theme');
+    $labels->new_item = __('News', 'custom_theme');
+    $labels->view_item = __('View News', 'custom_theme');
+    $labels->search_items = __('Search News', 'custom_theme');
+    $labels->not_found = __('No News found', 'custom_theme');
+    $labels->not_found_in_trash = __('No News found in Trash', 'custom_theme');
+    $labels->all_items = __('All News', 'custom_theme');
+    $labels->menu_name = __('News', 'custom_theme');
+    $labels->name_admin_bar = __('News', 'custom_theme');
+}
+
+// Custom for Woocommerce

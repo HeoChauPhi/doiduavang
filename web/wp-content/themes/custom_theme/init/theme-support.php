@@ -41,12 +41,15 @@ add_theme_support( 'post-thumbnails' );
 add_action( 'init', 'ct_support_remove_default_field' );
 function ct_support_remove_default_field() {
   $post_id = isset($_GET['post']) ? $_GET['post'] : (isset($_POST['post_ID']) ? $_POST['post_ID'] : '') ;
-  remove_post_type_support( 'page', 'thumbnail' );
 
   $template_file = get_post_meta($post_id, '_wp_page_template', true);
 
   if( $template_file == 'page-templates/template-landing-page.php' || $template_file == 'page-templates/template-sidebar-left.php' || $template_file == 'page-templates/template-sidebar-right.php' || $template_file == 'page-templates/template-two-sidebar.php' ) { // the filename of the page template
     remove_post_type_support('page', 'editor');
+  }
+
+  if( $template_file == 'page-templates/template-landing-page.php' ) {
+    remove_post_type_support( 'page', 'thumbnail' );
   }
 }
 
