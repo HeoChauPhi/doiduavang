@@ -1,0 +1,103 @@
+html {
+  @include roboto;
+  font-size: $base-font-size;
+  line-height: 1.5;
+}
+
+body {
+  @include roboto;
+  color: $color-base;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include robotoBold;
+}
+
+h1 {
+  font-size: rem(60px);
+}
+
+h2 {
+  font-size: rem(30px);
+}
+
+h3, h4 {
+  font-size: rem(28px);
+}
+
+a {
+  color: $color-link;
+  outline: none !important;
+
+  &:hover {
+    color: $color-link-hover;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.form-item {
+  margin-bottom: rem(25px);
+}
+
+.form-action {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  background-color: $bg-form-field;
+  border-radius: rem(5px);
+  border: rem(1px) solid $bg-form-field;
+  color: $color-line;
+  display: block;
+  padding: rem(15px 20px);
+  width: 100%;
+
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    border: rem(1px) solid $color-primary;
+    outline: none !important;
+  }
+
+  &:-internal-autofill-selected {
+    background-color: transparent !important;
+  }
+}
+
+input[type="file"] {
+  background-color: $bg-form-field;
+  border-radius: rem(5px);
+  border: rem(1px) solid $color-line;
+  padding: rem(8px 20px);
+}
+
+input[type="submit"],
+button {
+  @extend %btn;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: transparent !important;
+  transition: background-color 500000s;
+  -webkit-text-fill-color: $color-line !important;
+}

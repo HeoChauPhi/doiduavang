@@ -1,0 +1,125 @@
+.sidedebar-wrapper {
+  color: $color-light;
+
+  a {
+    color: $color-light;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: rem(15px);
+      padding-left: rem(24px);
+      position: relative;
+
+      &:before {
+        background-color: $bg-form-field;
+        content: "";
+        height: rem(8px);
+        left: 0;
+        position: absolute;
+        top: rem(8px);
+        width: rem(8px);
+      }
+    }
+  }
+
+  .sidebar-inner {
+    background-color: $white;
+    border: rem(1px) solid $color-line;
+    padding: rem(20px);
+  }
+
+  .block-widget:not(.acf_custom_widget) {
+    margin-bottom: rem(50px);
+  }
+
+  .block-title {
+    color: $color-link;
+    font-size: rem(18px);
+    margin: rem(0 -20px 15px -20px);
+    padding: rem(0 20px 0 25px);
+    position: relative;
+    text-transform: capitalize;
+
+    &:before {
+      background-color: $color-link;
+      content: "";
+      height: rem(13px);
+      left: 0;
+      position: absolute;
+      top: rem(4px);
+      width: rem(8px);
+    }
+  }
+
+  // Block search in sidebar
+  .widget_search,
+  .widget_product_search {
+    form {
+      border-radius: rem(3px);
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        @extend .fas;
+        @extend .fa-search;
+        bottom: 0;
+        font-size: rem(23px);
+        height: 100%;
+        line-height: rem(42px);
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: rem(42px);
+      }
+
+      > div {
+        width: 100%;
+      }
+
+      input[type="search"],
+      input[type="text"] {
+        background-color: $bg-form-field;
+        border: none;
+        margin: 0;
+        padding: rem(10px);
+        width: 100%;
+      }
+
+      input[type="submit"],
+      button[type="submit"] {
+        background: transparent;
+        border: none;
+        bottom: 0;
+        height: 100%;
+        min-width: unset;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-indent: -9999em;
+        top: 0;
+        width: rem(42px);
+      }
+    }
+  }
+
+  // Block Tag cloud
+  .tagcloud {
+    a.tag-cloud-link {
+      background-color: $bg-form-field;
+      display: inline-block;
+      font-size: rem(14px) !important;
+      margin-bottom: rem(3px);
+      padding: rem(5px 10px);
+    }
+  }
+}

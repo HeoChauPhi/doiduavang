@@ -1,0 +1,123 @@
+.woocommerce span.onsale {
+  @extend .onsale;
+}
+
+.archive-product-list {
+  align-items: flex-start;
+  margin: rem(0 -5px);
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @include breakpoint(desktop) {
+    margin: rem(0 -20px);
+  }
+}
+
+.archive-product-item {
+  margin-bottom: rem(10px);
+  padding: rem(0 5px);
+  text-align: center;
+  width: 50%;
+
+  @include breakpoint(colmd) {
+    margin-bottom: rem(30px);
+    padding: rem(0 15px);
+    width: 33.333%;
+
+    &.last {
+      float: right;
+    }
+
+    &.first {
+      clear: both;
+    }
+  }
+}
+
+.product-item-inner {
+  background-color: $white;
+  border: rem(1px) solid $color-line;
+  overflow: hidden;
+  padding: rem(0 10px 20px 10px);
+
+  .product-image {
+    border-bottom: rem(1px) solid $color-line;
+    margin: rem(0 -10px 10px -10px);
+    position: relative;
+  }
+
+  .onsale {
+    left: rem(10px);
+    top: rem(10px);
+  }
+
+  .product-title {
+    @include roboto;
+    font-size: rem(16px);
+    font-weight: 400;
+    margin-bottom: rem(10px);
+
+    a {
+      color: $color-base;
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
+
+  .product-price {
+    @include robotoBold;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(15px);
+
+    .price-publish,
+    .price-regular {
+      flex: 1;
+      text-align: center;
+    }
+
+    .price-publish {
+      color: $color-link;
+      font-size: rem(18px);
+    }
+
+    .price-regular {
+      color: lighten($color-base, 50%);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.woocommerce {
+  a.add_to_cart_button {
+    @extend %add-to-cart;
+  }
+}
+
+// Sidebar Woocommerce
+.sidedebar-wrapper {
+  .widget_price_filter {
+    &.woocommerce {
+      .ui-slider {
+        .ui-slider-range{
+          background-color: $color-link;
+        }
+
+        .ui-slider-handle {
+          background-color: darken($color-link, 20%);
+        }
+      }
+
+      .price_slider_amount {
+        .button {
+          min-width: auto;
+        }
+      }
+    }
+  }
+}

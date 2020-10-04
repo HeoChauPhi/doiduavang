@@ -1,0 +1,19 @@
+{% if block_counter_group|length > 1 %}
+  {% set counter_wrapper_class = 'row block-counter-cols' %}
+  {% set counter_item_class = 'col-md-6' %}
+{% else %}
+  {% set counter_wrapper_class = 'block-counter-full' %}
+  {% set counter_item_class = '' %}
+{% endif %}
+
+<div class="block-counter {{ component_class }}">
+  <div class="{{ counter_wrapper_class }} block-counter-inner">
+    {% for item in block_counter_group %}
+      <div class="{{ counter_item_class }} counter-item {% if loop.first %}counter-item-first{% elseif loop.last %}counter-item-last{% endif %}">
+        <div class="counter-number js-count-up">{{ item.counter_number }}</div>
+        <div class="counter-label">{{ item.counter_label }}</div>
+        <div class="counter-bg" style="background-image: url({{ item.counter_background.url }});"></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

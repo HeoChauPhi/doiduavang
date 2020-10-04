@@ -1,0 +1,103 @@
+.block-partner {
+  background-color: $white;
+  padding: rem(90px 0);
+
+  .group-header,
+  .block-partner-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .group-header {
+    margin-bottom: rem(20px);
+    text-align: left;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+    }
+
+    .block-title,
+    .block-link {
+      text-align: left;
+    }
+
+    .block-title {
+      color: $color-base;
+      font-size: rem(36px);
+      margin-bottom: rem(45px);
+    }
+
+    .block-desc {
+      margin-bottom: rem(45px);
+    }
+
+    .block-link {
+      a {
+        background-color: $color-link;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $color-link;
+        }
+      }
+    }
+  }
+
+  .block-partner-slider {
+    align-items: center;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &.slick-slider {
+      display: flex;
+    }
+  }
+
+  .partner-item {
+    flex: 1 33%;
+    margin-bottom: 70px;
+    text-align: center;
+    width: 33%;
+
+    > a {
+      display: block;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // Override Slick dots
+  .slick-list {
+    width: 100%;
+  }
+
+  .slick-dots {
+    position: static;
+    text-align: left;
+
+    > li {
+      background-color: $color-line-footer;
+      height: rem(5px);
+      margin: rem(0 10px 0 0);
+      width: rem(50px);
+
+      &.slick-active {
+        background-color: $color-link;
+      }
+
+      > button {
+        display: none;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

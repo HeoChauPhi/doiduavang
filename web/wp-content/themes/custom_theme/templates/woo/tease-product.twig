@@ -1,0 +1,79 @@
+{#<article {{ fn('post_class', null, post.ID ) }}>
+  
+  {{ fn('timber_set_product', post) }}
+
+
+  <div class="media">
+    {% do action( 'woocommerce_before_shop_loop_item' ) %}
+
+    {% if showthumb %}
+      <div class="media-figure {% if not post.thumbnail %}placeholder{% endif %}">
+        <a href="{{ post.link }}">
+          {% if post.thumbnail %}
+            <img src="{{ post.thumbnail.src|resize(post_thumb_size[0], post_thumb_size[1]) }}" />
+          {% else %}
+            <span class="thumb-placeholder"><i class="icon-camera"></i></span>
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="media-content">
+
+      {% do action('woocommerce_before_shop_loop_item_title') %}
+
+      {% if post.title %}
+        <h3 class="entry-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% else %}
+        <h3 class="entry-title"><a href="{{ post.link }}">{{ fn('the_title') }}</a></h3>
+      {% endif %}
+
+      {% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+      {% do action( 'woocommerce_after_shop_loop_item' ) %}
+
+    </div>
+
+  </div>
+
+</article>#}
+
+<article {{ fn('post_class', ['archive-product-item'], post.ID ) }}>
+  {{ fn('timber_set_product', post) }}
+  <div class="product-item-inner">
+    <div class="product-image">
+      <img src="{{ post.thumbnail.src|resize(297, 208) }}">
+      {% if post._sale_price %}
+      <span class="onsale">{{ __('Sale!', 'custom_theme') }}</span>
+      {% endif %}
+    </div>
+
+    <div class="product-content">
+      <h3 class="product-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+
+      <div class="product-price price">
+        {% if fn('wc_get_product', post.ID).get_sale_price %}
+        <span class="price-regular">
+          <span class="price-amount">{{ fn('wc_price', fn('wc_get_product', post.ID).get_regular_price) }}</span>
+        </span>
+        <span class="price-sale price-publish">
+          <span class="price-amount">{{ fn('wc_price', fn('wc_get_product', post.ID).get_sale_price) }}</span>
+        </span>
+        {% else %}
+        <span class="price-publish">
+          <span class="price-amount">{{ fn('wc_price', fn('wc_get_product', post.ID).get_regular_price) }}</span>
+        </span>
+        {% endif %}
+      </div>
+      <div class="product-actions">
+      {% do action( 'woocommerce_after_shop_loop_item' ) %}
+      </div>
+
+      {#<ul>
+        {% for item in fn('get_the_terms', post.ID, 'product_cat') %}
+          <li><a href="{{ fn('esc_url', fn('get_term_link', item.term_id)) }}">{{ fn('esc_html', item.name) }}</a></li>
+        {% endfor %}
+      </ul>#}
+
+    </div>
+  </div>
+</article>

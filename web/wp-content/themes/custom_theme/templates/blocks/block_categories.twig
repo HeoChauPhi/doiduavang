@@ -1,0 +1,22 @@
+<div class="block-widget custom-block-widget block-categories {{ component_class }}">
+  <h3 class="block-title">{{ block_title }}</h3>
+
+  <div class="block-widget-content">
+    {% if display_categories %}
+      <ul class="list-terms">
+        {% for tax in display_categories %}
+          {% set tax_name = tax.taxonomy %}
+          {% set term_ids = fn('get_term_children', tax.term_id, tax.taxonomy) %}
+
+          {% if term_ids %}
+          {% for term in term_ids %}
+            {% set term_obj = fn('get_term', term, tax_name) %}
+            {% set term_link = fn('get_term_link', term_obj) %}
+            <li class="term-item"><a href="{{ fn('esc_url', term_link) }}">{{ term_obj.name }}</a></li>
+          {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>

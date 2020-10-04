@@ -1,0 +1,83 @@
+.page-nop-ho-so-ung-tuyen {
+  .wpcf7-form {
+    .form-title {
+      font-size: rem(30px);
+      margin-bottom: rem(60px);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .form-group {
+      margin-bottom: rem(50px);
+    }
+
+    .form-group-title {
+      color: $color-link;
+      font-size: rem(18px);
+      margin: rem(0 0 30px);
+      padding: rem(0 20px 0 25px);
+      position: relative;
+      text-transform: capitalize;
+
+      &:before {
+        background-color: $color-link;
+        content: "";
+        height: rem(13px);
+        left: 0;
+        position: absolute;
+        top: rem(4px);
+        width: rem(8px);
+      }
+    }
+
+    .form-group-recruit {
+      .form-item {
+        clear: both;
+        overflow: hidden;
+        width: 100%;
+
+        > label {
+          float: left;
+          margin-right: rem(20px);
+          margin: 0;
+          min-width: rem(100px);
+        }
+      }
+
+      .value-return {
+        @include robotoBold;
+      }
+    }
+
+    .form-group-item {
+      @include breakpoint(colmd) {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        margin: rem(0 -10px);
+
+        .form-item {
+          flex: 1;
+          padding: rem(0 10px);
+        }
+      }
+    }
+
+    .form-group-download {
+      margin-bottom: rem(30px);
+    }
+
+    .link-download {
+      @include roboto;
+      background-color: $bg-form-field;
+      border: rem(1px) solid $color-line;
+      color: $color-base;
+      margin-bottom: rem(20px);
+      padding: rem(10px 20px);
+    }
+
+    .wpcf7-list-item {
+      margin-left: 0;
+    }
+  }
+}

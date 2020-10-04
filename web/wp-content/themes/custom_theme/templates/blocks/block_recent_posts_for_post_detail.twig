@@ -1,0 +1,19 @@
+<div class="block-widget custom-block-widget block-recent-posts {{ component_class }}">
+  <h3 class="block-title">{{ block_title }}</h3>
+  <div class="block-widget-content">
+
+    {% if display_post_image or display_post_desc or display_post_read_more %}
+    <div class="archive-list">
+      {% for item in recent_posts %}
+        {% include 'archive-tease.twig' with {post: item, post_recent: 1, display_post_image: display_post_image, display_post_desc: display_post_desc, display_post_read_more: display_post_read_more} only %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <ul class="archive-post-list">
+      {% for item in recent_posts %}
+      <li class="post-item"><a href="{{ item.link }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

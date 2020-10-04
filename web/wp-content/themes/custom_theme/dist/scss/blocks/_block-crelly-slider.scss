@@ -1,0 +1,78 @@
+.block-crelly-slider {
+  @include roboto;
+  background-color: $black;
+  position: relative;
+
+  .crellyslider {
+    font-family: inherit !important;
+
+    &:after {
+      background-color: $black;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .cs-progress-bar {
+    z-index: 1 !important;
+  }
+
+  .cs-controls {
+    .cs-next,
+    .cs-previous {
+      @extend .fas;
+      background-image: none;
+      font-size: rem(30px);
+      height: rem(51px);
+      line-height: rem(51px);
+      opacity: 0.6;
+      text-align: center;
+      width: rem(51px);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .cs-next {
+      @extend .fa-chevron-right;
+    }
+
+    .cs-previous {
+      @extend .fa-chevron-left;
+    }
+  }
+
+  .cs-navigation {
+    .cs-slide-link {
+      height: rem(8px);
+      margin: rem(4px); 
+      opacity: 1;
+      width: rem(8px);
+
+      &.cs-active {
+        background-color: $color-link;
+      }
+    }
+  }
+
+  .btn {
+    @include roboto;
+    background-color: $color-link;
+    border-radius: rem(500px);
+    color: $white;
+    padding: rem(10px 50px) !important;
+
+    &:hover {
+      background-color: $white;
+      color: $color-link;
+    }
+  }
+}

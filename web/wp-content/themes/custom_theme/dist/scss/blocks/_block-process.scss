@@ -1,0 +1,47 @@
+.block-process {
+  background-color: $bg-main-block;
+  padding: rem(80px 0 15px);
+
+  .block-process-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .process-item {
+    margin: rem(0 10px 20px);
+    width: 40%;
+
+    @include breakpoint(colmd) {
+      width: 30%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 24%;
+      margin: rem(0 55px 60px);
+    }
+  }
+
+  .process-number {
+    @include robotoBold;
+    background-color: $color-link;
+    border-radius: rem(7px);
+    color: $white;
+    font-size: rem(48px);
+    height: rem(100px);
+    line-height: rem(100px);
+    margin: 0 auto rem(35px) auto;
+    width: rem(100px);
+  }
+
+  .process-title {
+    @include robotoBold;
+    font-size: rem(24px);
+    margin-bottom: rem(30px);
+  }
+
+  .process-desc {
+    font-size: rem(18px);
+  }
+}

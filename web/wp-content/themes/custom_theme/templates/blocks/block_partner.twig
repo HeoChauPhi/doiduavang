@@ -1,0 +1,24 @@
+<div class="block-partner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 group-header">
+        <h2 class="block-title">{{ block_title }}</h2>
+        <div class="block-desc">{{ block_desc }}</div>
+        {% if block_link %}
+        <div class="block-link">
+          <a class="btn" href="{{ block_link.url }}" {% if block_link.target %}target="_blank"{% endif %}>{{ block_link.title }}</a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-md-6 block-partner-list">
+        <div class="block-partner-slider">
+          {% for item in block_partner_list %}
+            <div class="partner-item">
+              <a href="{{ item.partner_url }}" target="_blank"><img src="{{ item.partner_logo.url }}" alt="{{ item.partner_logo.title }}" title="{{ item.partner_logo.title }}"></a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

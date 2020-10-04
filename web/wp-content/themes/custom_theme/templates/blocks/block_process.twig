@@ -1,0 +1,20 @@
+<div class="block-process {{ component_class }}">
+  <div class="container">
+    <div class="group-header">
+      <h2 class="block-title">{{ block_title }}</h2>
+      <div class="block-desc">{{ block_desc }}</div>
+    </div>
+
+    <div class="block-content">
+      <div class="block-process-list">
+        {% for item in block_process_list %}
+          <div class="process-item">
+            <div class="process-number">{{ item.number }}</div>
+            <h3 class="process-title">{{ item.title }}</h3>
+            <div class="process-desc">{{ item.description }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

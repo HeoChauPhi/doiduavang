@@ -1,0 +1,75 @@
+{% set tax_title = title %}
+
+{% extends 'layout.twig' %}
+
+{% block feature %}
+  <div id="feature" class="feature-wrapper">
+    <div class="feature-media">
+      <img class="paralax-image" src="{{ term.get_field('term_featured_image').url }}" alt="{{ term.get_field('term_featured_image').title|replace({'-': ' ', '_': ' '}) }}" title="{{ term.get_field('term_featured_image').title|replace({'-': ' ', '_': ' '}) }}">
+    </div>
+
+    <div class="container">
+      <div class="feature-inner">
+        <div class="group-title">
+          {% if title is defined %}
+            <h2 id="page-title">{{ title }}</h2>
+          {% endif %}
+        </div>
+        {% include 'breadcrumb.twig' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block page_intro %}
+  {% if fn('term_description', term.ID) %}
+  <div class="block-page-intro">
+    <div class="container">
+    {% if fn('term_description', term.ID) %}
+      <div class="page-excerpt">{{ fn('term_description', term.ID) }}</div>
+    {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% set current_posts_id = [] %}
+  <div class="container">
+    <div class="row">
+      <div id="main-content" class="main-content col-lg-9">
+        <div class="archive-list">
+          <div class="row">
+            {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
+              {% if function('is_tag') %}
+                {% include ['tags.twig', 'archive-tease.twig'] %}
+              {% elseif function('is_category') %}
+                {% include ['category.twig', 'archive-tease.twig'] %}
+              {% elseif function('is_post_type_archive') %}
+                {% include ["archive-"~post.post_type~".twig", 'archive-tease.twig'] %}
+              {% else %}
+                {% include 'archive-tease.twig' %}
+              {% endif %}
+              {% set current_posts_id = current_posts_id|merge([post.ID]) %}
+            {% endfor %}
+          </div>
+        </div>
+        {#% include 'pagination.twig' with {pagedtype: 'loadmore'} %#}
+        <div class="tool-pagination ajax-loadmore-pagination block-pager {% if current_posts_id|length >=  term.get_posts|length %}pager-unvisible{% endif %}">
+          <div class="ajax-loadmore-pagination-inner">
+            <a href="#" class="btn btn-ajax">{{ __('Load More', 'custom_theme') }}</a>
+          </div>
+          <input type="hidden" name="post_type" value="post">
+          <input type="hidden" name="taxonomy" value="{{ term.taxonomy }}">
+          <input type="hidden" name="term_id" value="{{ term.ID }}">
+          <input type="hidden" name="current_posts_id" value="{{ current_posts_id|join(',') }}">
+          <input type="hidden" name="max_items" value="{{ term.get_posts|length }}">
+          <input type="hidden" name="more_items" value="4">
+          <input type="hidden" name="list_result" value=".archive-list > .row">
+        </div>
+      </div>
+
+      {% include 'sidebar-left.twig' %}
+    </div>
+  </div>
+{% endblock %}

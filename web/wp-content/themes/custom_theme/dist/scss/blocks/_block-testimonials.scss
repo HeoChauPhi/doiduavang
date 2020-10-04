@@ -1,0 +1,94 @@
+.block-testimonials {
+  background-color: $white;
+  padding: rem(60px 0);
+
+  .block-title {
+    @extend %block-title;
+  }
+
+  .block-testimonials-image,
+  .block-testimonials-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block-testimonials-image {
+    margin-bottom: rem(20px);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      padding-right: rem(45px);
+    }
+  }
+
+  .block-testimonials-slider {
+    display: none;
+
+    &.slick-slider {
+      display: flex;
+    }
+
+    @include breakpoint(tablet) {
+      padding-left: rem(45px);
+    }
+  }
+
+  .testimonial-item {
+    margin-bottom: rem(50px);
+  }
+
+  .testimonial-author {
+    display: flex;
+    margin-bottom: rem(40px);
+  }
+
+  .author-avatar {
+    border-radius: rem(500px);
+    height: rem(80px);
+    margin-right: rem(35px);
+    overflow: hidden;
+    width: rem(80px);
+  }
+
+  .author-name {
+    @include robotoBold;
+    color: $black;
+    font-size: rem(18px);
+    margin-bottom: rem(15px);
+  }
+
+  .author-job {
+    color: $color-light;
+    font-size: rem(14px);
+  }
+
+  .author-comment {
+    @extend %testimonial;
+  }
+
+  // Override Slick dots
+  .slick-dots {
+    position: static;
+    text-align: left;
+
+    > li {
+      background-color: $color-line-footer;
+      height: rem(5px);
+      margin: rem(0 10px 0 0);
+      width: rem(50px);
+
+      &.slick-active {
+        background-color: $color-link;
+      }
+
+      > button {
+        display: none;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

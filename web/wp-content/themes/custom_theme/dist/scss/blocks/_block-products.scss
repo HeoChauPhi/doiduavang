@@ -1,0 +1,122 @@
+.block-products {
+  background-color: $bg-main-block;
+  padding: rem(75px 0 35px);
+
+  .block-title {
+    @extend %block-title;
+  }
+
+  .products-list {
+    .woocommerce {
+      ul.products{
+        margin-bottom: 0;
+
+        li.product {
+          border: rem(1px) solid $color-line;
+          margin: rem(0 0 20px);
+          text-align: center;
+
+          @include breakpoint(colmdDown) {
+            width: 48%;
+
+            &:nth-of-type(2n+1) {
+              clear: both;
+              float: left;
+            }
+
+            &:nth-of-type(2n) {
+              float: right;
+            }
+          }
+
+          @include breakpoint(colmd) {
+            margin: rem(0 40px 40px 0);
+            width: calc(calc(100% - 160px)/4);
+
+            &.last {
+              margin-right: 0;
+            }
+          }
+
+          a.woocommerce-loop-product__link {
+            display: block;
+            overflow: hidden;
+            padding-top: rem(208px);
+            position: relative;
+            text-align: center;
+          }
+
+          .onsale {
+            left: rem(10px);
+            margin: 0;
+            right: auto;
+            top: rem(10px);
+          }
+
+          img {
+            height: rem(208px);
+            left: 50%;
+            margin: auto;
+            max-width: none;
+            position: absolute;
+            right: auto;
+            top: 0;
+            transform: translateX(-50%);
+            width: auto;
+          }
+
+          .woocommerce-loop-product__title {
+            @include roboto;
+            border-top: rem(1px) solid $color-line;
+            color: $black;
+            font-size: rem(16px);
+            margin-bottom: rem(10px);
+            padding: rem(15px 10px 0 15px);
+          }
+
+          .star-rating {
+            margin: 0 auto rem(10px) auto;
+            padding: rem(0 10px);
+          }
+
+          .price {
+            @include robotoBold;
+            align-items: flex-end;
+            color: $color-link;
+            display: flex;
+            font-size: inherit;
+            justify-content: center;
+            margin-bottom: rem(15px);
+            padding: rem(0 10px);
+
+            del,
+            ins {
+              flex: 1;
+              opacity: 1;
+              text-align: center;
+            }
+
+            del {
+              color: lighten($color-base, 50%);
+            }
+
+            ins {
+              font-size: rem(18px);
+            }
+          }
+
+          .add_to_cart_button {
+            display: inline-block;
+            left: auto;
+            margin: rem(0 25px 20px 25px);
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .block-link {
+    margin-bottom: rem(40px);
+  }
+}

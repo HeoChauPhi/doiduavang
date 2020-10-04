@@ -1,0 +1,66 @@
+.block-counter {
+  overflow: hidden;
+
+  .counter-item {
+    background-color: $color-link;
+    color: $white;
+    padding: rem(60px 110px);
+    position: relative;
+    text-align: center;
+
+    &:nth-of-type(even) {
+      background-color: darken($color-link, 20%);
+
+      .counter-bg {
+        background-position: right center;
+      }
+    }
+  }
+
+  .counter-number {
+    @include robotoBold;
+    font-size: rem(60px);
+  }
+
+  .counter-label {
+    font-size: rem(30px);
+  }
+
+  .counter-bg {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .block-counter-cols {
+    @include breakpoint(tablet) {
+      .counter-item {
+        .counter-bg {
+          background-position: center center;
+        }
+      }
+
+      .counter-item-first {
+        text-align: right;
+
+        .counter-bg {
+          background-position: left center;
+        }
+      }
+
+      .counter-item-last {
+        text-align: left;
+
+        .counter-bg {
+          background-position: right center;
+        }
+      }
+    }
+  }
+}

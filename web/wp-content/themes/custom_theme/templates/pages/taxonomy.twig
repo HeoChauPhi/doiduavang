@@ -1,0 +1,38 @@
+{% set tax_title = term.name %}
+
+{% extends 'layout.twig' %}
+
+{% block feature %}
+  <div id="feature" class="feature-wrapper">
+    <div class="feature-media">
+      <img class="paralax-image" src="{{ term.get_field('term_featured_image').url }}" alt="{{ term.get_field('term_featured_image').title|replace({'-': ' ', '_': ' '}) }}" title="{{ term.get_field('term_featured_image').title|replace({'-': ' ', '_': ' '}) }}">
+    </div>
+    
+    <div class="container">
+      <div class="feature-inner">
+        <div class="group-title">
+          {% if term.name is defined %}
+            <h2 id="page-title">{{ term.name }}</h2>
+          {% endif %}
+        </div>
+        {% include 'breadcrumb.twig' %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block page_intro %}
+  {% if fn('term_description', term.ID) %}
+  <div class="block-page-intro">
+    <div class="container">
+    {% if fn('term_description', term.ID) %}
+      <div class="page-excerpt">{{ fn('term_description', term.ID) }}</div>
+    {% endif %}
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% include ["taxonomy-"~term.id~".twig", "taxonomy-"~term.taxonomy~".twig", 'taxonomy-tease.twig'] with {term: term} %}
+{% endblock %}

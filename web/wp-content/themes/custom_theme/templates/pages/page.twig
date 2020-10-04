@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <div class="container">
+    <div class="main-content-inner {{ container_option_class }}">
+      <div class="content-editor-wrapper">
+        {{ post.content|shortcodes }}
+      </div>
+
+      {% if function('comments_open') %}
+      {% include 'comments.twig' %}
+      {{ function('comment_form') }}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="block-commitment {{ component_class }}">
+  <div class="row">
+    {% for item in block_commitment_group %}
+      <div class="block-commitment-item col-md-4" style="background-color: {{ item.commitment_color }}">
+        <div class="commitment-icon"><img src="{{ item.commitment_icon.url|resize(0, 126) }}" alt="{{ item.commitment_icon.title }}" title="{{ item.commitment_icon.title }}"></div>
+        <div class="commitment-label">{{ item.commitment_label }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

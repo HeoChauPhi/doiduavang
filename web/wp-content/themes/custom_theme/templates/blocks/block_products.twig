@@ -1,0 +1,17 @@
+<div class="block-products {{ component_class }}">
+  <div class="container">
+    <h2 class="block-title">{{ block_title }}</h2>
+
+    <div class="products-content">
+      <div class="products-list">
+        {{ fn('shortcode', '[products limit="' ~ show_products ~ '" columns="4" visibility="visible"]') }}
+      </div>
+    </div>
+
+    {% if block_link %}
+    <div class="block-link">
+      <a class="btn" href="{{ block_link.url }}" {% if block_link.target %}target="_blank"{% endif %}>{{ block_link.title }}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>

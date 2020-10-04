@@ -1,0 +1,24 @@
+<div class="block-testimonials {{ component_class }}">
+  <div class="container">
+    <h2 class="block-title">{{ block_title }}</h2>
+    <div class="block-content">
+      <div class="row">
+        <div class="col-md-6 block-testimonials-image"><img src="{{ block_image.url }}" alt="{{ block_image.title }}" title="{{ block_image.title }}"></div>
+        <div class="col-md-6 block-testimonials-slider">
+          {% for item in block_testimonial_slider %}
+            <div class="testimonial-item">
+              <div class="testimonial-author">
+                <div class="author-avatar"><img src="{{ item.avatar.url|resize(80, 80) }}" alt="{{ item.avatar.title }}" title="{{ item.avatar.title }}"></div>
+                <div class="author-info">
+                  <div class="author-name">{{ item.name }}</div>
+                  <div class="author-job">{{ item.job }}</div>
+                </div>
+              </div>
+              <div class="author-comment">{{ item.comment }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

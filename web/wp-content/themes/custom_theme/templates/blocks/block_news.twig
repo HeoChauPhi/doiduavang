@@ -1,0 +1,13 @@
+<div class="block-news {{ component_class }}">
+  <div class="container">
+    <h2 class="block-title">{{ block_title }}</h2>
+    <div class="news-slide archive-list">
+      {% for post in posts_result %}
+        {% include 'archive-tease.twig' with {block_slide: 1} %}
+      {% endfor %}
+    </div>
+    <div class="block-link">
+      <a class="btn" href="{{ block_link.url }}" {% if block_link.target %}target="_blank"{% endif %}>{{ block_link.title }}</a>
+    </div>
+  </div>
+</div>

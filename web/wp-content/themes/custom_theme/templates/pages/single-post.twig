@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div id="main-content" class="main-content col-lg-9">
+      <div class="main-content-inner">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div class="post-date">{{ post.date }}</div>
+        <div class="post-content">{{ post.content|shortcodes }}</div>
+
+        {% if fn('in_category', 'tuyen-dung', post.ID) %}
+          {% set form_target = "/nop-ho-so-ung-tuyen/?recruit_title=" ~ post.recruit_title ~ "&recruit_location=" ~ post.recruit_location ~ "&recruit_recruiter=" ~ post.recruit_recruiter %}
+
+          <div class="send-application-link">
+            <a href='{{ fn("get_home_url", null, form_target) }}' class="btn" target="_blank">{{ __('Send application file', 'custom_theme') }}</a>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="post-actions">
+        {% if fn('get_the_tags', post.ID) %}
+          <div class="post-tags">
+            <div class="post-tags-label">{{ __('Tags') }}</div>
+            <ul class="post-tags-list">
+              {% for item in fn('get_the_tags', post.ID) %}
+                <li><a href="{{ fn('esc_url', fn('get_tag_link', item.term_id)) }}">{{ fn('esc_html', item.name) }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% include 'social-detail.twig' with {permalink: post.link, title: post.title, print_icon: 0} only %}
+      </div>
+
+      {% if function('comments_open') %}
+      {#% include 'comments.twig' %}
+      {{ function('comment_form') }#}
+      {% include 'comments-facebook.twig' with {post_url : fn('get_permalink')} only %}
+      {% endif %}
+    </div>
+
+    {% include 'sidebar-left.twig' %}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.blog-posts {
+  .block-title {
+    @include robotoBold;
+    color: $color-link;
+    font-size: rem(30px);
+    margin-bottom: rem(35px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .archive-post-item {
+    margin: rem(0 0 30px);
+  }
+}

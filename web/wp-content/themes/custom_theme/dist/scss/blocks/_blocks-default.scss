@@ -1,0 +1,55 @@
+%block-title {
+  @include robotoBold;
+  color: $color-link;
+  font-size: rem(30px);
+  margin-bottom: rem(60px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.group-title {
+  color: $white;
+  text-align: center;
+
+  .block-title {
+    @extend %block-title;
+    margin-bottom: rem(25px);
+  }
+
+  .block-description {
+    font-size: rem(18px);
+  }
+}
+
+.group-header {
+  margin-bottom: rem(55px);
+  text-align: center;
+
+  .block-title {
+    @extend %block-title;
+    margin-bottom: rem(25px);
+  }
+
+  .block-desc {
+    font-size: rem(18px);
+  }
+}
+
+.block-link {
+  text-align: center;
+
+  > a {
+    @include roboto;
+    background-color: $white;
+    border-radius: rem(500px);
+    border: rem(1px) solid $color-link;
+    color: $color-link;
+    padding: rem(7px 20px);
+  
+    &:hover {
+      background-color: $color-link;
+      border-color: $color-link;
+      color: $color-link-hover;
+    }
+  }
+}

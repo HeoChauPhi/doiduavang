@@ -1,0 +1,62 @@
+.searchform {
+  position: relative;
+}
+
+.searchform,
+.searchform > div {
+  display: flex;
+
+  input[type=text] {
+    @include robotoItalic;
+    margin: rem(0 10px 0 0);
+  }
+}
+
+.header-top-inner {
+  .searchform {
+    > div {
+      &:before {
+        @extend .fas;
+        @extend .fa-search;
+        border-left: rem(1px) solid $white;
+        font-size: rem(25px);
+        line-height: rem(37px);
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: rem(52px);
+      }
+    }
+
+    input[type=text] {
+      background-color: transparent;
+      border-radius: rem(500px);
+      color: $white;
+      margin: 0;
+      padding: rem(7px 53px 7px 20px);
+      width: rem(400px);
+
+      &:active,
+      &:hover,
+      &:focus,
+      &:visited {
+        border-color: $white;
+      }
+
+      &:focus {
+        @include roboto;
+      }
+    }
+
+    input[type="submit"] {
+      border-radius: rem(0 500px 500px 0);
+      bottom: 0;
+      min-width: auto;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: rem(52px);
+    }
+  }
+}

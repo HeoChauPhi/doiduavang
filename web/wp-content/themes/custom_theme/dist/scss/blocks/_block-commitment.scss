@@ -1,0 +1,27 @@
+.block-commitment {
+  overflow: hidden;
+
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &-item {
+    color: $white;
+    font-size: rem(24px);
+    padding: rem(60px 45px);
+    text-align: center;
+  
+    &:nth-of-type(odd) {
+      margin-bottom: 0;
+
+      @include breakpoint(tablet) {
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+
+  .commitment-icon {
+    margin-bottom: rem(45px);
+  }
+}

@@ -1,0 +1,65 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+  <div class="container">
+    <div class="main-content-inner">
+
+      {% do action('woocommerce_before_single_product') %}
+
+      <article itemscope itemtype="http://schema.org/Product" class="single-product-details {{ post.class }}">
+
+        <div class="row product-summary">
+          <div class="entry-images col-lg-7">
+            <div class="entry-images-inner">
+              {% do action('woocommerce_before_single_product_summary') %}
+
+              {#<img src="{{ post.thumbnail.src('shop_single') }}" />#}
+            </div>
+          </div>
+
+          <div class="summary entry-summary col-lg-5">
+              {% do action('woocommerce_single_product_summary') %}
+          </div>
+        </div>
+
+        {#% do action('woocommerce_after_single_product_summary') %#}
+
+        <div class="row product-informations">
+          <div class="col-lg-7">
+            {% if product.get_description %}
+            <div class="product-description">
+              {{ fn('wc_get_template', 'single-product/tabs/description.php') }}
+            </div>
+            {% endif %}
+            {% if product.get_attributes or product.get_dimensions(false) or product.get_weight %}
+            <div class="product-information">
+              {{ fn('wc_get_template', 'single-product/tabs/additional-information.php') }}
+            </div>
+            {% endif %}
+          </div>
+          <div class="col-lg-5 product-comment">{{ fn('comments_template') }}</div>
+        </div>
+
+        <meta itemprop="url" content="{{ post.link }}" />
+
+      </article>
+
+      {% do action('woocommerce_after_single_product') %}
+
+    </div>
+
+
+    {% if related_products %}
+      <div class="block-related-product">
+        <h3 class="block-title">{{ __('Related products', 'custom_theme') }}</h3>
+        {#{ related_products|print_r }#}
+        <div class="archive-product-list related-product-list">
+          {% for post in related_products %}
+            {% include ["woo/tease-product.twig"] with { post: post } %}
+          {% endfor %}
+        </div>
+        <div class="post-link-page"><a href="{{ fn('get_permalink', fn('get_option', 'woocommerce_shop_page_id')) }}" target="_blank">{{ __('Read More', 'custom_theme') }}</a></div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock  %}

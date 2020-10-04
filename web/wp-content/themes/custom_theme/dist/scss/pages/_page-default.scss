@@ -1,0 +1,29 @@
+.cover-overflow {
+  &:after {
+    background-color: rgba($black, 0.8);
+    bottom: 0;
+    content: "";
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: background-color .5s ease-in-out;
+    width: 100vw;
+    z-index: 9;
+  }
+}
+
+.fb-comments {
+  background-color: $white;
+  border: rem(1px) solid $color-line;
+  padding: rem(40px);
+}
+
+.page-template-default {
+  .content-editor-wrapper {
+    + [class*="block-"] {
+      margin-top: rem(100px)
+    }
+  }
+}
