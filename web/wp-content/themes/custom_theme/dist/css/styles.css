@@ -13371,6 +13371,19 @@ body.home main {
   margin-top: 6.6666666667rem;
 }
 
+.search-results .feature-media {
+  background-image: url(../images/background/bg-feature.png);
+}
+.search-results .feature-media .paralax-image {
+  display: none;
+}
+.search-results .main-content-inner .block-search {
+  margin-bottom: 2.6666666667rem;
+}
+.search-results .search-result__item {
+  margin-bottom: 1.3333333333rem;
+}
+
 .archive-list .archive-post-item {
   margin: 0rem 0rem 2.6666666667rem;
 }

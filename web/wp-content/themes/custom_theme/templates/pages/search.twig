@@ -5,13 +5,14 @@
   <div class="main-content-inner">
     {% include 'searchform.twig' %}
 
-    <div class="search-result archive-list">
+    <div class="search-result">
       {% if posts %}
-        <div class="row">
-          {% for post in posts %}
-            {% include 'archive-tease.twig' %}
-          {% endfor %}
-        </div>
+        {% for post in posts %}
+          <div class="search-result__item">
+            <h3 class="search-result__title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+            <div class="search-result__text">{{post.content|excerpt(30)}}</div>
+          </div>
+        {% endfor %}
       {% else %}
         <p>{{ __('Sorry, no results were found!', 'custom_theme') }}</p>
       {% endif %}

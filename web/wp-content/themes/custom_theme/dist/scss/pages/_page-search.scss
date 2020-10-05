@@ -1,0 +1,19 @@
+.search-results {
+  .feature-media {
+    background-image: url(../images/background/bg-feature.png);
+
+    .paralax-image {
+      display: none;
+    }
+  }
+
+  .main-content-inner {
+    .block-search {
+      margin-bottom: rem(40px);
+    }
+  }
+
+  .search-result__item {
+    margin-bottom: rem(20px);
+  }
+}
