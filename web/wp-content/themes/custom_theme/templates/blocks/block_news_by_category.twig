@@ -1,0 +1,18 @@
+<div class="block-pót-by-category {{ component_class }}">
+  {% if block_title %}
+  <div class="group-header">
+    <h2 class="block-title">{{ block_title }}</h2>
+  </div>
+  {% endif %}
+
+  <div class="archive-list">
+    <div class="row">
+      {% for post in posts_result %}
+        {% include 'archive-tease.twig' %}
+      {% endfor %}
+    </div>
+  </div>
+  {% if display_pagination %}
+  {% include 'pagination.twig' %}
+  {% endif %}
+</div>
