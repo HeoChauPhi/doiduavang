@@ -53,3 +53,10 @@
     }
   }
 }
+
+.main-content-inner {
+  .container {
+    max-width: none !important;
+    padding: 0;
+  }
+}

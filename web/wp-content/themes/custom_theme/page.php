@@ -27,8 +27,14 @@ $protected = post_password_required($post->ID);
 $context['protected_label'] = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
 $context['post'] = $post;
 $context['title_option'] = framework_page('title');
+$context['rm_social'] = framework_page('rm-social');
+
 if ( !empty(framework_page('small-container')) ) {
   $context['container_option_class'] = 'container-small';
+}
+
+if ( !empty(framework_page('rm-background')) ) {
+  $context['rm_background'] = 'main-transparent';
 }
 
 /*print_r($post);

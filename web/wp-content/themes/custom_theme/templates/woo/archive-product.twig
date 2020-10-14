@@ -18,7 +18,8 @@
           {% endfor %}
         </div>
 
-        {#% do action('woocommerce_after_shop_loop') %#}
+        {% do action('woocommerce_after_shop_loop') %}
+        {#
         {% set pager_class = null %}
         {% if fn('is_shop') %}
           {% if current_posts_id|length >=  products_list|length %}
@@ -46,6 +47,7 @@
             <input type="hidden" name="max_items" value="{{ term.get_posts|length }}">
           {% endif %}
         </div>
+        #}
       </div>
       
       {% include 'sidebar-left.twig' %}

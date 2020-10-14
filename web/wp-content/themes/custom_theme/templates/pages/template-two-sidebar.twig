@@ -4,7 +4,27 @@
   <div class="container">
     <div class="row">
       <div id="main-content" class="main-content col-lg-6">
-        {{ function('flexible_content', 'group_component') }}
+        <div class="main-content-inner {{ rm_background }}">
+          
+          {% if title_option != "on" %}
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="post-date">{{ post.date }}</div>
+          {% endif %}
+          
+          {{ function('flexible_content', 'group_component') }}
+        </div>
+
+        {% if rm_social != 'on' %}
+          <div class="post-actions">
+            {% include 'social-detail.twig' with {permalink: post.link, title: post.title, print_icon: 0} only %}
+          </div>
+        {% endif %}
+
+        {% if function('comments_open') %}
+        {#% include 'comments.twig' %}
+        {{ function('comment_form') }#}
+        {% include 'comments-facebook.twig' with {post_url : fn('get_permalink')} only %}
+        {% endif %}
       </div>
 
       {% include 'sidebar-left.twig' %}

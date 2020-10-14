@@ -1,31 +1,9 @@
 .single-post {
-  .post-title {
-    font-size: rem(24px);
-  }
-
-  .post-date {
-    margin-bottom: rem(20px);
-  }
-
-  .post-actions,
   .post-tags,
-  .post-tags-list,
-  .social-wrapper,
-  .social-icons__list {
+  .post-tags-list {
     align-items: center;
     display: flex;
     justify-content: center;
-  }
-
-  .post-actions {
-    justify-content: space-between;
-    padding: rem(10px 40px);
-
-    .social-wrapper {
-      flex: 1;
-      justify-content: flex-end;
-      padding-left: rem(10px);
-    }
   }
 
   .post-tags {
@@ -62,6 +40,27 @@
         }
       }
     }
+  }
+}
+
+.post-actions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: rem(10px 40px);
+
+  .social-icons__list {
+    align-items: center;
+    display: flex;
+    justify-content: center;    
+  }
+
+  .social-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    padding-left: rem(10px);
   }
 }
 

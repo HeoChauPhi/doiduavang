@@ -216,7 +216,6 @@ function ct_change_template_single_title() {
   the_title( '<h2 class="product_title entry-title">', '</h2>' );
 }
 
-
 /*$exited_post = get_page_by_title('Trung tâm thương mại - Việt Nam tại Lô1/20 KĐT Ngã Năm Sân bay Cát Bi, Ngô Quyền, Hải Phòng', OBJECT, 'store_system');
 if ( $exited_post ) {
   print_r($exited_post);

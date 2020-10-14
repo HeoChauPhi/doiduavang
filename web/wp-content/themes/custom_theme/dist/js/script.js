@@ -237,6 +237,7 @@
     $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
     $('.blog-posts .archive-list .archive-item-inner').matchHeight({property: 'min-height'});
     $('.block-products li.product a.woocommerce-loop-product__link').matchHeight({property: 'min-height'});
+    $('.archive-list .archive-post-item .post-title').matchHeight({property: 'min-height'});
     quantityStyle('.cart .quantity input[name="quantity"]');
     productGallerySlider();
     $('.ajax-loadmore-pagination a').on('click', pagination_ajax_loadmore);

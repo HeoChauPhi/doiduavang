@@ -40,6 +40,8 @@ web/wp-content/themes/*
 web/private/*
 !web/private/config/
 !web/private/scripts/
+wp-content/wp-rocket-config/
+wp-content/cache/
 
 # Packages #
 ############

@@ -114,7 +114,7 @@ body {
   } */
 }
 
-.main-content-inner {
+.main-content-inner:not(.main-transparent) {
   background-color: $white;
   border: rem(1px) solid $color-line;
   padding: rem(20px);

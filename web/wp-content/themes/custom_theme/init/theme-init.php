@@ -231,8 +231,40 @@ function flexible_content($name) {
       $field['component_id'] = $key + 1;
 
       switch ($layout) {
-        case 'test':
-          print_r($field);
+        case 'block_news_by_category':
+          global $paged;
+          if (!isset($paged) || !$paged){
+            $paged = 1;
+          }
+
+          $posts_per_page = get_option('posts_per_page');
+
+          if (!empty($field['number_of_posts']) && ($field['number_of_posts'] > 0)) {
+            $count = $field['number_of_posts'];
+          } else {
+            $count = $posts_per_page;
+          }
+
+          $args = array(
+            'post_type' => 'post',
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => $field['categories_select'],
+                'include_children' => true,
+                'operator' => 'IN'
+              )
+            ),
+            'posts_per_page' => $count,
+            'paged' => $paged
+          );
+
+          query_posts($args);
+          $field['posts_result'] = Timber::get_posts($args);
+          $field['pagination'] = Timber::get_pagination();
+
+          //print_r($field);
 
           if (hasfiles(get_template_directory() . "/templates/**/*.twig", $layout_template)) {
             Timber::render($layout_template, $field);

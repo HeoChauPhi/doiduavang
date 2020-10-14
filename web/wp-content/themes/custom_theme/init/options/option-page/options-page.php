@@ -29,6 +29,24 @@ function ct_page_option_metaboxes() {
     'type'       => 'checkbox',
     //'default'    => 1
   ) );
+  
+  // Page container small
+  $cmb->add_field( array(
+    'name'       => __( 'Remove background', 'cmb2' ),
+    'desc'       => __( 'Check it if you want remove main background', 'cmb2' ),
+    'id'         => $prefix . 'rm-background',
+    'type'       => 'checkbox',
+    //'default'    => 1
+  ) );
+  
+  // Page container small
+  $cmb->add_field( array(
+    'name'       => __( 'Remove social', 'cmb2' ),
+    'desc'       => __( 'Check it if you want remove Social', 'cmb2' ),
+    'id'         => $prefix . 'rm-social',
+    'type'       => 'checkbox',
+    //'default'    => 1
+  ) );
 }
 
 function framework_page($name = '') {
