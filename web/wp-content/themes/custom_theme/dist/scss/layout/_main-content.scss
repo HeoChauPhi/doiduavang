@@ -48,19 +48,35 @@ body {
   }
 
   .feature-inner {
-    align-items: flex-end;
-    display: flex;
-    justify-content: space-between;
     margin-bottom: rem(140px);
 
     .group-title {
-      flex: 1;
-      max-width: 60%;
-      text-align: left;
+      margin-bottom: rem(20px);
+      text-align: unset;
     }
 
     .breadcrumb-wrapper {
-      max-width: 40%;
+      .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    @include breakpoint(colmd) {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+
+      .group-title {
+        flex: 1;
+        margin-bottom: 0;
+        max-width: 60%;
+        text-align: left;
+      }
+
+      .breadcrumb-wrapper {
+        max-width: 40%;
+      }
     }
   }
 }

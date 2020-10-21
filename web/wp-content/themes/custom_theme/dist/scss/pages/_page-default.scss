@@ -17,6 +17,7 @@
 .fb-comments {
   background-color: $white;
   border: rem(1px) solid $color-line;
+  display: block !important;
   padding: rem(40px);
 }
 

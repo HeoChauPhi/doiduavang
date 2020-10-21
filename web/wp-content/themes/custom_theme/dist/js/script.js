@@ -253,6 +253,33 @@
       var val_return = $(this).find('input[type="hidden"]').val();
       $(this).find('> label').after('<span class="value-return">' + val_return + '</span>')
     });
+
+    $( 'body' ).on( 'added_to_cart', function( e, fragments, cart_hash, this_button ) {
+      $cart_count = $('.block-navigation .cart-icon .cart-count').text();
+
+      $.ajax({
+        type : "post",
+        dataType : "json",
+        url : themeAjax.ajaxurl,
+        data : {
+          action: "notice_add_to_cart",
+          product_id: this_button['context']['dataset']['product_id']
+        },
+        beforeSend: function() {},
+        success: function(response) {
+          $('.block-navigation .cart-icon .cart-count').text(parseInt($cart_count) + 1);
+
+          $('.page-wrapper').append('<div id="notice-add-to-cart" class="woocommerce-message">' + response.markup + '</div>');
+
+          setTimeout(function() {
+            $("#notice-add-to-cart").remove();
+          }, 3000);
+        },
+        error: function(response) {
+          console.log('error');
+        }
+      });
+    });
   });
 
   $(window).scroll(function() {

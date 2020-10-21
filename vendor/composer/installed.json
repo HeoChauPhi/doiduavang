@@ -892,16 +892,16 @@
     },
     {
         "name": "wpackagist-plugin/amp",
-        "version": "2.0.4",
-        "version_normalized": "2.0.4.0",
+        "version": "2.0.5",
+        "version_normalized": "2.0.5.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/amp/",
-            "reference": "tags/2.0.4"
+            "reference": "tags/2.0.5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/amp.2.0.4.zip"
+            "url": "https://downloads.wordpress.org/plugin/amp.2.0.5.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1193,16 +1193,16 @@
     },
     {
         "name": "wpackagist-plugin/woocommerce",
-        "version": "4.5.2",
-        "version_normalized": "4.5.2.0",
+        "version": "4.6.0",
+        "version_normalized": "4.6.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/woocommerce/",
-            "reference": "tags/4.5.2"
+            "reference": "tags/4.6.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.5.2.zip"
+            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.6.0.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1233,16 +1233,16 @@
     },
     {
         "name": "wpackagist-plugin/wordpress-seo",
-        "version": "15.1",
-        "version_normalized": "15.1.0.0",
+        "version": "15.1.1",
+        "version_normalized": "15.1.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-            "reference": "tags/15.1"
+            "reference": "tags/15.1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.1.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"

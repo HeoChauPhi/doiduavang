@@ -11659,12 +11659,25 @@ button:hover {
   color: #f72936;
   font-size: 0.9333333333rem;
   line-height: inherit;
-  padding: 0.4666666667rem 3.3333333333rem 0.4666666667rem 1.3333333333rem;
+  padding: 0.4666666667rem 3.3333333333rem 0.4666666667rem 1.3333333333rem !important;
 }
 .single-product-details .summary form.cart .single_add_to_cart_button:before, .woocommerce a.add_to_cart_button:before {
   font-size: 1.3333333333rem;
   position: absolute;
   right: 1.3333333333rem;
+}
+@media (max-width: 480px) {
+  .single-product-details .summary form.cart .single_add_to_cart_button, .woocommerce a.add_to_cart_button {
+    padding: 0.4666666667rem 2rem 0.4666666667rem 0.6666666667rem !important;
+  }
+  .single-product-details .summary form.cart .single_add_to_cart_button:before, .woocommerce a.add_to_cart_button:before {
+    font-size: 1rem;
+    line-height: 20px;
+    right: 0.6666666667rem;
+  }
+}
+.single-product-details .summary form.cart .single_add_to_cart_button:after, .woocommerce a.add_to_cart_button:after {
+  display: none !important;
 }
 .single-product-details .summary form.cart .single_add_to_cart_button:hover, .woocommerce a.add_to_cart_button:hover {
   background-color: #f72936;
@@ -11672,7 +11685,7 @@ button:hover {
   font-weight: 700;
 }
 
-.group-quantity {
+.group-quantity, .woocommerce-cart table.cart .product-quantity > .quantity {
   align-items: center;
   border-radius: 0.2rem;
   border: 0.0666666667rem solid #eeeeee;
@@ -11681,19 +11694,25 @@ button:hover {
   max-width: 130px;
   overflow: hidden;
 }
-.group-quantity input.qty {
+.group-quantity input.qty, .woocommerce-cart table.cart .product-quantity > .quantity input.qty {
   border: none;
   flex: 1;
   text-align: center;
 }
-.group-quantity input.qty::-webkit-inner-spin-button,
-.group-quantity input.qty ::-webkit-outer-spin-button {
+.group-quantity input.qty::-webkit-inner-spin-button, .woocommerce-cart table.cart .product-quantity > .quantity input.qty::-webkit-inner-spin-button,
+.group-quantity input.qty ::-webkit-outer-spin-button,
+.woocommerce-cart table.cart .product-quantity > .quantity input.qty ::-webkit-outer-spin-button {
   -webkit-appearance: none;
           appearance: none;
 }
-.group-quantity .qty-control {
+.group-quantity .qty-control, .woocommerce-cart table.cart .product-quantity > .quantity .qty-control,
+.group-quantity .wac-qty-button,
+.woocommerce-cart table.cart .product-quantity > .quantity .wac-qty-button {
   background-color: #eeeeee;
+  border-radius: 0;
+  color: #000000;
   cursor: pointer;
+  font-weight: 400;
   padding: 0.6rem 1rem;
 }
 
@@ -12357,18 +12376,31 @@ body.home main {
   width: 100%;
 }
 .feature-wrapper .feature-inner {
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 9.3333333333rem;
 }
 .feature-wrapper .feature-inner .group-title {
-  flex: 1;
-  max-width: 60%;
-  text-align: left;
+  margin-bottom: 1.3333333333rem;
+  text-align: unset;
 }
-.feature-wrapper .feature-inner .breadcrumb-wrapper {
-  max-width: 40%;
+.feature-wrapper .feature-inner .breadcrumb-wrapper .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (min-width: 992px) {
+  .feature-wrapper .feature-inner {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+  }
+  .feature-wrapper .feature-inner .group-title {
+    flex: 1;
+    margin-bottom: 0;
+    max-width: 60%;
+    text-align: left;
+  }
+  .feature-wrapper .feature-inner .breadcrumb-wrapper {
+    max-width: 40%;
+  }
 }
 
 #page-title {
@@ -13384,6 +13416,7 @@ body.home main {
 .fb-comments {
   background-color: #ffffff;
   border: 0.0666666667rem solid #999999;
+  display: block !important;
   padding: 2.6666666667rem;
 }
 
@@ -13621,6 +13654,19 @@ body.home main {
   text-decoration: line-through;
 }
 
+.woocommerce a.add_to_cart_button + a.added_to_cart {
+  display: none !important;
+}
+
+#notice-add-to-cart {
+  bottom: 0;
+  margin-right: 1.3333333333rem;
+  position: fixed;
+  right: 0;
+  width: 20rem;
+  z-index: 9;
+}
+
 .sidedebar-wrapper .widget_price_filter.woocommerce .ui-slider .ui-slider-range {
   background-color: #f72936;
 }
@@ -13763,7 +13809,6 @@ body.home main {
 .woocommerce-cart table.cart .product-thumbnail img {
   width: 6.6666666667rem;
 }
-
 .page-nop-ho-so-ung-tuyen .wpcf7-form .form-title {
   font-size: 2rem;
   margin-bottom: 4rem;

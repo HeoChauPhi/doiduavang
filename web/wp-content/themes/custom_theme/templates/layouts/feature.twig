@@ -4,7 +4,11 @@
 <div id="feature" class="feature-wrapper">
   {#<div class="feature-media parallax-window" data-parallax="scroll" data-image-src="{{ post.thumbnail.src }}" title="{{ post.thumbnail.title|replace({'-': ' ', '_': ' '}) }}" data-speed="1.0"></div>#}
   <div class="feature-media">
-    <img class="paralax-image" src="{{ post.thumbnail.src }}" alt="image">
+    {% if fn('is_singular', 'product') %}
+      <img class="paralax-image" src="{{ post.get_field('feature_image').url }}" alt="image">
+    {% else %}
+      <img class="paralax-image" src="{{ post.thumbnail.src }}" alt="image">
+    {% endif %}
   </div>
   <div class="container">
     <div class="feature-inner">
