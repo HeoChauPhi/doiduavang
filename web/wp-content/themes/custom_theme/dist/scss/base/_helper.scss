@@ -179,12 +179,10 @@
   }
 
   @include breakpoint(mobileonly) {
-    padding: rem(7px 30px 7px 10px) !important;
+    padding: rem(7px 10px) !important;
 
     &:before {
-      font-size: rem(15px);
-      line-height: 20px;
-      right: rem(10px);
+      display: none;
     }
   }
 

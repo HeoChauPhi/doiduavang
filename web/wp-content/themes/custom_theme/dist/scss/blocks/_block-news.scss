@@ -27,4 +27,14 @@
       }
     }
   }
+
+  .post-title {
+    a {
+      color: $black;
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
 }

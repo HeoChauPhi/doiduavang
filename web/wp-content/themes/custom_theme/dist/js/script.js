@@ -237,6 +237,7 @@
     $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
     $('.blog-posts .archive-list .archive-item-inner').matchHeight({property: 'min-height'});
     $('.block-products li.product a.woocommerce-loop-product__link').matchHeight({property: 'min-height'});
+    $('.archive-product-list .archive-product-item .product-title').matchHeight({property: 'min-height'});
     $('.archive-list .archive-post-item .post-title').matchHeight({property: 'min-height'});
     quantityStyle('.cart .quantity input[name="quantity"]');
     productGallerySlider();
@@ -274,6 +275,24 @@
           setTimeout(function() {
             $("#notice-add-to-cart").remove();
           }, 3000);
+        },
+        error: function(response) {
+          console.log('error');
+        }
+      });
+    });
+
+    $( 'body' ).on( 'updated_cart_totals', function(){
+      $.ajax({
+        type : "post",
+        dataType : "json",
+        url : themeAjax.ajaxurl,
+        data : {
+          action: "page_cart_change",
+        },
+        beforeSend: function() {},
+        success: function(response) {
+          $('.block-navigation .cart-icon .cart-count').text(response.markup);
         },
         error: function(response) {
           console.log('error');

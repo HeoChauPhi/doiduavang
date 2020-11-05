@@ -24,6 +24,14 @@
       color: $black;
       font-size: rem(24px);
       margin-bottom: rem(10px);
+
+      a {
+        color: $black;
+
+        &:hover {
+          color: $color-link;
+        }
+      }
     }
 
     .post-date {

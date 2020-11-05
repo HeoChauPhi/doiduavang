@@ -110,6 +110,10 @@
             left: auto;
             margin: rem(0 25px 20px 25px);
             right: auto;
+
+            @include breakpoint(mobileonly) {
+              margin: rem(0 5% 20px 5%);
+            }
           }
         }
       }
