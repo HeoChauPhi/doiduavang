@@ -1071,6 +1071,26 @@
         "homepage": "https://wordpress.org/plugins/polylang/"
     },
     {
+        "name": "wpackagist-plugin/redirection",
+        "version": "4.9.2",
+        "version_normalized": "4.9.2.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/redirection/",
+            "reference": "tags/4.9.2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/redirection.4.9.2.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/redirection/"
+    },
+    {
         "name": "wpackagist-plugin/so-widgets-bundle",
         "version": "1.17.10",
         "version_normalized": "1.17.10.0",
