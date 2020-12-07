@@ -282,7 +282,7 @@
       });
     });
 
-    $( 'body' ).on( 'updated_cart_totals', function(){
+    $( document.body ).on( 'updated_wc_div', function(){
       $.ajax({
         type : "post",
         dataType : "json",

@@ -891,17 +891,37 @@
         "homepage": "https://wordpress.org/plugins/advanced-woocommerce-product-gallery-slider/"
     },
     {
-        "name": "wpackagist-plugin/amp",
-        "version": "2.0.5",
-        "version_normalized": "2.0.5.0",
+        "name": "wpackagist-plugin/all-404-redirect-to-homepage",
+        "version": "1.20",
+        "version_normalized": "1.20.0.0",
         "source": {
             "type": "svn",
-            "url": "https://plugins.svn.wordpress.org/amp/",
-            "reference": "tags/2.0.5"
+            "url": "https://plugins.svn.wordpress.org/all-404-redirect-to-homepage/",
+            "reference": "trunk"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/amp.2.0.5.zip"
+            "url": "https://downloads.wordpress.org/plugin/all-404-redirect-to-homepage.zip?timestamp=1593088139"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/all-404-redirect-to-homepage/"
+    },
+    {
+        "name": "wpackagist-plugin/amp",
+        "version": "2.0.7",
+        "version_normalized": "2.0.7.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/amp/",
+            "reference": "tags/2.0.7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/amp.2.0.7.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1052,16 +1072,16 @@
     },
     {
         "name": "wpackagist-plugin/so-widgets-bundle",
-        "version": "1.17.8",
-        "version_normalized": "1.17.8.0",
+        "version": "1.17.10",
+        "version_normalized": "1.17.10.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/so-widgets-bundle/",
-            "reference": "tags/1.17.8"
+            "reference": "tags/1.17.10"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/so-widgets-bundle.1.17.8.zip"
+            "url": "https://downloads.wordpress.org/plugin/so-widgets-bundle.1.17.10.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1153,16 +1173,16 @@
     },
     {
         "name": "wpackagist-plugin/user-role-editor",
-        "version": "4.56.1",
-        "version_normalized": "4.56.1.0",
+        "version": "4.57",
+        "version_normalized": "4.57.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-            "reference": "tags/4.56.1"
+            "reference": "tags/4.57"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.56.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.57.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1173,16 +1193,16 @@
     },
     {
         "name": "wpackagist-plugin/widget-css-classes",
-        "version": "1.5.4",
-        "version_normalized": "1.5.4.0",
+        "version": "1.5.4.1",
+        "version_normalized": "1.5.4.1",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/widget-css-classes/",
-            "reference": "tags/1.5.4"
+            "reference": "tags/1.5.4.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/widget-css-classes.1.5.4.zip"
+            "url": "https://downloads.wordpress.org/plugin/widget-css-classes.1.5.4.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1193,16 +1213,16 @@
     },
     {
         "name": "wpackagist-plugin/woocommerce",
-        "version": "4.6.1",
-        "version_normalized": "4.6.1.0",
+        "version": "4.7.1",
+        "version_normalized": "4.7.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/woocommerce/",
-            "reference": "tags/4.6.1"
+            "reference": "tags/4.7.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.6.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.7.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1233,16 +1253,16 @@
     },
     {
         "name": "wpackagist-plugin/wordpress-seo",
-        "version": "15.2.1",
-        "version_normalized": "15.2.1.0",
+        "version": "15.4",
+        "version_normalized": "15.4.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-            "reference": "tags/15.2.1"
+            "reference": "tags/15.4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.2.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.4.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1273,16 +1293,16 @@
     },
     {
         "name": "wpackagist-plugin/wp-smushit",
-        "version": "3.7.1",
-        "version_normalized": "3.7.1.0",
+        "version": "3.7.3",
+        "version_normalized": "3.7.3.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/wp-smushit/",
-            "reference": "tags/3.7.1"
+            "reference": "tags/3.7.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/wp-smushit.3.7.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/wp-smushit.3.7.3.zip"
         },
         "require": {
             "composer/installers": "~1.0"

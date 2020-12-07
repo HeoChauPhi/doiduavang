@@ -12393,11 +12393,7 @@ body.home main {
   .feature-wrapper .feature-inner .group-title {
     flex: 1;
     margin-bottom: 0;
-    max-width: 60%;
     text-align: left;
-  }
-  .feature-wrapper .feature-inner .breadcrumb-wrapper {
-    max-width: 40%;
   }
 }
 
@@ -13347,8 +13343,47 @@ body.home main {
   padding: 0;
 }
 
+#comment,
 #comments {
   margin-bottom: 3.3333333333rem;
+}
+
+#comment .comment-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 2.6666666667rem;
+}
+#comment .comment {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 1.3333333333rem;
+  position: relative;
+}
+#comment .comment-author-picture {
+  width: 2.1333333333rem;
+}
+#comment .comment-content {
+  border-radius: 0.2666666667rem;
+  border: 0.0666666667rem solid #cccccc;
+  flex: 1;
+  margin: 0rem 0rem 0rem 1.3333333333rem;
+  padding: 0.9333333333rem 0.9333333333rem 0rem;
+}
+#comment .comment-header {
+  font-size: 0.8rem;
+  margin-bottom: 0.9333333333rem;
+}
+#comment .comment-author {
+  font-weight: bold;
+  color: #000000;
+}
+#comment .comment-author:hover {
+  color: #f72936;
+}
+#comment .comment-date {
+  color: #666666;
 }
 
 #commentform > p {
@@ -13438,6 +13473,18 @@ body.home main {
 }
 .main-content-inner .post-date {
   margin-bottom: 1.3333333333rem;
+}
+
+.block-404 {
+  margin-top: 3.3333333333rem;
+}
+.block-404__content {
+  text-align: center;
+}
+.block-404__logo {
+  display: block;
+  margin: 0 auto;
+  width: 13.3333333333rem;
 }
 
 .search-results .feature-media {

@@ -104,8 +104,9 @@ function page_cart_change_callback() {
   global $product;
 
   $cart_count = WC()->cart->get_cart_contents_count();
+  $cart_count_result = empty($cart_count) || $cart_count == null ? '0' : $cart_count;
 
-  $result = json_encode(array('markup' => $cart_count));
+  $result = json_encode(array('markup' => $cart_count_result));
   echo $result;
   wp_die();
 }

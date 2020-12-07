@@ -21,9 +21,9 @@
         {% endif %}
 
         {% if function('comments_open') %}
-        {#% include 'comments.twig' %}
-        {{ function('comment_form') }#}
-        {% include 'comments-facebook.twig' with {post_url : fn('get_permalink')} only %}
+        {% include 'comments.twig' %}
+        {{ function('comment_form') }}
+        {#% include 'comments-facebook.twig' with {post_url : fn('get_permalink')} only %#}
         {% endif %}
       </div>
   

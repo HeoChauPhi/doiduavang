@@ -2,8 +2,55 @@
   padding: 0;
 }
 
+#comment,
 #comments {
   margin-bottom: rem(50px);
+}
+
+#comment {
+  .comment-title {
+    @include robotoBold;
+    display: block;
+    font-size: rem(30px);
+    margin-bottom: rem(40px);
+  }
+
+  .comment {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: rem(20px);
+    position: relative;
+  }
+
+  .comment-author-picture {
+    width: rem(32px);
+  }
+
+  .comment-content {
+    border-radius: rem(4px);
+    border: rem(1px) solid $color-line-footer;
+    flex: 1;
+    margin: rem(0 0 0 20px);
+    padding: rem(14px 14px 0);
+  }
+
+  .comment-header {
+    font-size: rem(12px);
+    margin-bottom: rem(14px);
+  }
+
+  .comment-author {
+    font-weight: bold;
+    color: $color-base;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+
+  .comment-date {
+    color: $color-light;
+  }
 }
 
 #commentform {
