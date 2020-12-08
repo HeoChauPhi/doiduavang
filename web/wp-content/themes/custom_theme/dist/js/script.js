@@ -168,6 +168,12 @@
    * Loading Jquery
    *
    ================================================================== */
+
+  $(window).scroll(function() {
+    backToTopShow();
+    $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'height'});
+  });
+  
   $(document).ready(function() {
     //console.log(PythagorasEquirectangular(20.999591499999998, 105.8404626, 21.6074228, 105.8395769));
 
@@ -234,7 +240,6 @@
       rows: 2,
     });
 
-    $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
     $('.blog-posts .archive-list .archive-item-inner').matchHeight({property: 'min-height'});
     $('.block-products li.product a.woocommerce-loop-product__link').matchHeight({property: 'min-height'});
     $('.archive-product-list .archive-product-item .product-title').matchHeight({property: 'min-height'});
@@ -299,10 +304,6 @@
         }
       });
     });
-  });
-
-  $(window).scroll(function() {
-    backToTopShow();
   });
 
   $(window).load(function() {

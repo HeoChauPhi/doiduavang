@@ -952,16 +952,16 @@
     },
     {
         "name": "wpackagist-plugin/contact-form-7",
-        "version": "5.3",
-        "version_normalized": "5.3.0.0",
+        "version": "5.3.1",
+        "version_normalized": "5.3.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-            "reference": "tags/5.3"
+            "reference": "tags/5.3.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.3.zip"
+            "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.3.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -992,16 +992,16 @@
     },
     {
         "name": "wpackagist-plugin/content-aware-sidebars",
-        "version": "3.13",
-        "version_normalized": "3.13.0.0",
+        "version": "3.13.1",
+        "version_normalized": "3.13.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/content-aware-sidebars/",
-            "reference": "tags/3.13"
+            "reference": "tags/3.13.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/content-aware-sidebars.3.13.zip"
+            "url": "https://downloads.wordpress.org/plugin/content-aware-sidebars.3.13.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1052,16 +1052,16 @@
     },
     {
         "name": "wpackagist-plugin/polylang",
-        "version": "2.8.4",
-        "version_normalized": "2.8.4.0",
+        "version": "2.9",
+        "version_normalized": "2.9.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/polylang/",
-            "reference": "tags/2.8.4"
+            "reference": "tags/2.9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/polylang.2.8.4.zip"
+            "url": "https://downloads.wordpress.org/plugin/polylang.2.9.zip"
         },
         "require": {
             "composer/installers": "~1.0"
