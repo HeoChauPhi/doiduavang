@@ -269,7 +269,7 @@
         url : themeAjax.ajaxurl,
         data : {
           action: "notice_add_to_cart",
-          product_id: this_button['context']['dataset']['product_id']
+          product_id: $(this_button[0]).data('product_id')
         },
         beforeSend: function() {},
         success: function(response) {
