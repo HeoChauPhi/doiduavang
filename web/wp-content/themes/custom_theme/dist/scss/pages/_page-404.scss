@@ -1,0 +1,13 @@
+.block-404 {
+  margin-top: rem(50px);
+
+  &__content {
+    text-align: center;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: rem(200px);
+  }
+}
