@@ -1213,16 +1213,16 @@
     },
     {
         "name": "wpackagist-plugin/user-role-editor",
-        "version": "4.58",
-        "version_normalized": "4.58.0.0",
+        "version": "4.58.1",
+        "version_normalized": "4.58.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-            "reference": "trunk"
+            "reference": "tags/4.58.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/user-role-editor.zip?timestamp=1610337128"
+            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.58.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"

@@ -26,7 +26,12 @@
   "@type": "WebSite",
   "@id": "{{ fn('home_url', '#website') }}",
   "url": "{{ fn('home_url', '/') }}",
-  "name": "{{ site.name }}"
+  "name": "{{ site.name }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ fn('home_url', '/search?q={query}') }}",
+    "query-input": "required name=query"
+  }
 }
 </script>
 <!-- End Schema for Front page -->
@@ -82,7 +87,12 @@
   "@type": "WebSite",
   "@id": "{{ fn('home_url', '#website') }}",
   "url": "{{ fn('home_url', '/') }}",
-  "name": "{{ site.name }}"
+  "name": "{{ site.name }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ fn('home_url', '/search?q={query}') }}",
+    "query-input": "required name=query"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -118,7 +128,12 @@
   "@type": "WebSite",
   "@id": "{{ fn('home_url', '#website') }}",
   "url": "{{ fn('home_url', '/') }}",
-  "name": "{{ site.name }}"
+  "name": "{{ site.name }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ fn('home_url', '/search?q={query}') }}",
+    "query-input": "required name=query"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -179,7 +194,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Recipe",
-  "author": "{{ post.author }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.author }}"
+  },
   "cookTime": "{% if fn('get_field', 'news_schema').news_cook_time %}{{ fn('get_field', 'news_schema').news_cook_time }}{% else %}00:00{% endif %}",
   "datePublished": "{{ post.date }}",
   "description": "{{ post.post_excerpt|excerpt(30) }}",
@@ -209,7 +227,6 @@
   "suitableForDiet": "https://schema.org/LowFatDiet",
   "keywords": "{{ fn('get_field', 'news_schema').news_keywords }}",
   "recipeCuisine": "{{ fn('get_field', 'news_schema').news_recipe_cuisine }}",
-  "video": "{{ fn('get_field', 'news_schema').news_video_url }}",
   "recipeCategory": "{{ fn('get_term', primary_term_id).name }}"
 }
 </script>
