@@ -992,16 +992,16 @@
     },
     {
         "name": "wpackagist-plugin/content-aware-sidebars",
-        "version": "3.14",
-        "version_normalized": "3.14.0.0",
+        "version": "3.14.1",
+        "version_normalized": "3.14.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/content-aware-sidebars/",
-            "reference": "tags/3.14"
+            "reference": "tags/3.14.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/content-aware-sidebars.3.14.zip"
+            "url": "https://downloads.wordpress.org/plugin/content-aware-sidebars.3.14.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1012,16 +1012,16 @@
     },
     {
         "name": "wpackagist-plugin/crelly-slider",
-        "version": "1.4.3",
-        "version_normalized": "1.4.3.0",
+        "version": "1.4.4",
+        "version_normalized": "1.4.4.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/crelly-slider/",
-            "reference": "tags/1.4.3"
+            "reference": "tags/1.4.4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/crelly-slider.1.4.3.zip"
+            "url": "https://downloads.wordpress.org/plugin/crelly-slider.1.4.4.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1069,6 +1069,26 @@
         "type": "wordpress-plugin",
         "installation-source": "dist",
         "homepage": "https://wordpress.org/plugins/polylang/"
+    },
+    {
+        "name": "wpackagist-plugin/psn-pagespeed-ninja",
+        "version": "0.9.43",
+        "version_normalized": "0.9.43.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/psn-pagespeed-ninja/",
+            "reference": "tags/0.9.43"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/psn-pagespeed-ninja.0.9.43.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/psn-pagespeed-ninja/"
     },
     {
         "name": "wpackagist-plugin/redirection",
@@ -1193,16 +1213,16 @@
     },
     {
         "name": "wpackagist-plugin/user-role-editor",
-        "version": "4.57.1",
-        "version_normalized": "4.57.1.0",
+        "version": "4.58",
+        "version_normalized": "4.58.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-            "reference": "tags/4.57.1"
+            "reference": "trunk"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.57.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/user-role-editor.zip?timestamp=1610337128"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1253,16 +1273,16 @@
     },
     {
         "name": "wpackagist-plugin/woocommerce-ajax-cart",
-        "version": "1.3.17",
-        "version_normalized": "1.3.17.0",
+        "version": "1.3.19",
+        "version_normalized": "1.3.19.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/woocommerce-ajax-cart/",
-            "reference": "tags/1.3.17"
+            "reference": "tags/1.3.19"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/woocommerce-ajax-cart.1.3.17.zip"
+            "url": "https://downloads.wordpress.org/plugin/woocommerce-ajax-cart.1.3.19.zip"
         },
         "require": {
             "composer/installers": "~1.0"
