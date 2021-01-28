@@ -1,11 +1,11 @@
 [
     {
         "name": "advanced-custom-fields-pro",
-        "version": "5.9.3",
-        "version_normalized": "5.9.3.0",
+        "version": "5.9.4",
+        "version_normalized": "5.9.4.0",
         "dist": {
             "type": "zip",
-            "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDcwMDB8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTEyLTMwIDE5OjAxOjU1&t=5.9.3"
+            "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDcwMDB8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTEyLTMwIDE5OjAxOjU1&t=5.9.4"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -912,16 +912,16 @@
     },
     {
         "name": "wpackagist-plugin/amp",
-        "version": "2.0.9",
-        "version_normalized": "2.0.9.0",
+        "version": "2.0.10",
+        "version_normalized": "2.0.10.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/amp/",
-            "reference": "tags/2.0.9"
+            "reference": "tags/2.0.10"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/amp.2.0.9.zip"
+            "url": "https://downloads.wordpress.org/plugin/amp.2.0.10.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1032,16 +1032,16 @@
     },
     {
         "name": "wpackagist-plugin/mailchimp-for-wp",
-        "version": "4.8.1",
-        "version_normalized": "4.8.1.0",
+        "version": "4.8.3",
+        "version_normalized": "4.8.3.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/mailchimp-for-wp/",
-            "reference": "tags/4.8.1"
+            "reference": "tags/4.8.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/mailchimp-for-wp.4.8.3.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1092,16 +1092,16 @@
     },
     {
         "name": "wpackagist-plugin/redirection",
-        "version": "4.9.2",
-        "version_normalized": "4.9.2.0",
+        "version": "5.0.1",
+        "version_normalized": "5.0.1.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/redirection/",
-            "reference": "tags/4.9.2"
+            "reference": "tags/5.0.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/redirection.4.9.2.zip"
+            "url": "https://downloads.wordpress.org/plugin/redirection.5.0.1.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1213,16 +1213,16 @@
     },
     {
         "name": "wpackagist-plugin/user-role-editor",
-        "version": "4.58.1",
-        "version_normalized": "4.58.1.0",
+        "version": "4.58.2",
+        "version_normalized": "4.58.2.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/user-role-editor/",
-            "reference": "tags/4.58.1"
+            "reference": "tags/4.58.2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.58.1.zip"
+            "url": "https://downloads.wordpress.org/plugin/user-role-editor.4.58.2.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1253,16 +1253,16 @@
     },
     {
         "name": "wpackagist-plugin/woocommerce",
-        "version": "4.8.0",
-        "version_normalized": "4.8.0.0",
+        "version": "4.9.2",
+        "version_normalized": "4.9.2.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/woocommerce/",
-            "reference": "tags/4.8.0"
+            "reference": "tags/4.9.2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.8.0.zip"
+            "url": "https://downloads.wordpress.org/plugin/woocommerce.4.9.2.zip"
         },
         "require": {
             "composer/installers": "~1.0"
@@ -1293,16 +1293,16 @@
     },
     {
         "name": "wpackagist-plugin/wordpress-seo",
-        "version": "15.5",
-        "version_normalized": "15.5.0.0",
+        "version": "15.7",
+        "version_normalized": "15.7.0.0",
         "source": {
             "type": "svn",
             "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-            "reference": "tags/15.5"
+            "reference": "tags/15.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.5.zip"
+            "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.7.zip"
         },
         "require": {
             "composer/installers": "~1.0"
