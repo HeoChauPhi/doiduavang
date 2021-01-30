@@ -1091,6 +1091,26 @@
         "homepage": "https://wordpress.org/plugins/psn-pagespeed-ninja/"
     },
     {
+        "name": "wpackagist-plugin/really-simple-ssl",
+        "version": "4.0.7",
+        "version_normalized": "4.0.7.0",
+        "source": {
+            "type": "svn",
+            "url": "https://plugins.svn.wordpress.org/really-simple-ssl/",
+            "reference": "tags/4.0.7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://downloads.wordpress.org/plugin/really-simple-ssl.4.0.7.zip"
+        },
+        "require": {
+            "composer/installers": "~1.0"
+        },
+        "type": "wordpress-plugin",
+        "installation-source": "dist",
+        "homepage": "https://wordpress.org/plugins/really-simple-ssl/"
+    },
+    {
         "name": "wpackagist-plugin/redirection",
         "version": "5.0.1",
         "version_normalized": "5.0.1.0",
