@@ -11473,6 +11473,20 @@ input:-webkit-autofill:active {
   margin: 0.5333333333rem 0rem 0.5333333333rem 1.0666666667rem;
 }
 
+.wp-block-image.text-center figcaption {
+  text-align: center;
+}
+.wp-block-image.text-right figcaption {
+  text-align: right;
+}
+
+.wp-caption .text-center ~ .wp-caption-text {
+  text-align: center;
+}
+.wp-caption .text-right ~ .wp-caption-text {
+  text-align: right;
+}
+
 @media (min-width: 1024px) {
   .hidden-on-desktop {
     display: none;
