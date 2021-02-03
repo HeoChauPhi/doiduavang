@@ -184,6 +184,7 @@
 
     counterUp();
 
+    $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
     $('.news-slide').slick({
       autoplay: true,
       autoplaySpeed: 3000,
@@ -215,6 +216,12 @@
         // settings: "unslick"
         // instead of a settings object
       ]
+    }).on('init', function (event, slick) {
+      //console.log(slick);
+      $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      //console.log(slick);
+      $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'min-height'});
     });
 
     $('.block-testimonials-slider').slick({
@@ -239,7 +246,6 @@
       rows: 2,
     });
 
-    $('.news-slide .slide-item .archive-item-inner').matchHeight({property: 'height'});
     $('.blog-posts .archive-list .archive-item-inner').matchHeight({property: 'min-height'});
     $('.block-products li.product a.woocommerce-loop-product__link').matchHeight({property: 'min-height'});
     $('.archive-product-list .archive-product-item .product-title').matchHeight({property: 'min-height'});

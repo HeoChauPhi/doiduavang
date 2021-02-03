@@ -8,11 +8,11 @@
   }
 
   .news-slide {
-    display: none;
+    display: flex;
     overflow: hidden;
 
     &.slick-slider {
-      display: block;
+      display: flex;
     }
 
     .slick-list {

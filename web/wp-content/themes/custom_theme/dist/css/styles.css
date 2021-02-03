@@ -13332,11 +13332,11 @@ body.home main {
   margin-bottom: 3.6666666667rem;
 }
 .block-news .news-slide {
-  display: none;
+  display: flex;
   overflow: hidden;
 }
 .block-news .news-slide.slick-slider {
-  display: block;
+  display: flex;
 }
 .block-news .news-slide .slick-list {
   margin-left: -1.0666666667rem;
