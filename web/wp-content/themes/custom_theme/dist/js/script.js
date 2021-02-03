@@ -244,6 +244,7 @@
     $('.block-products li.product a.woocommerce-loop-product__link').matchHeight({property: 'min-height'});
     $('.archive-product-list .archive-product-item .product-title').matchHeight({property: 'min-height'});
     $('.archive-list .archive-post-item .post-title').matchHeight({property: 'min-height'});
+    $('.archive-list .archive-post-item .post-excerpt').matchHeight({property: 'min-height'});
     quantityStyle('.cart .quantity input[name="quantity"]');
     productGallerySlider();
     $('.ajax-loadmore-pagination a').on('click', pagination_ajax_loadmore);
