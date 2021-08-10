@@ -84,7 +84,8 @@
     "wpackagist-plugin/all-404-redirect-to-homepage": "1.20",
     "wpackagist-plugin/redirection": "5.0.1",
     "wpackagist-plugin/psn-pagespeed-ninja": "0.9.43",
-    "wpackagist-plugin/really-simple-ssl": "4.0.7"
+    "wpackagist-plugin/really-simple-ssl": "4.0.7",
+    "wpackagist-plugin/classic-editor": "1.6"
   },
   "config": {
     "vendor-dir": "vendor",
